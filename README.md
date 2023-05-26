@@ -9,3 +9,21 @@ This is my first project and I didn't even know that it is runnung properly or n
 * fer (pip install fer)
 * moviepy (pip install moviepy)
 * tensorflow (pip install tensorflow)
+# Requiements
+
+* Python
+* Web Camera
+
+# About the Project
+
+The main motive of this project is to access the web cam and to detect the person's emotion who is infront of the camera
+The common emotions are
+* Angry
+* Disguest
+* Panic (fear)
+* Happy 
+* Sad
+* Neutral
+
+The project will show the percentage of the above mentioned emotions
+We can also print the emotion having highest percentage
