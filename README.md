@@ -9,7 +9,7 @@ This is my first project and I didn't even know that it is runnung properly or n
 
 * flask (pip install flask)
 * camera (pip install camera)
-* opencv (pip install opencv)
+* opencv (pip install opencv-python)
 * numpy (pip install numpy)
 * fer (pip install fer)
 * moviepy (pip install moviepy)
