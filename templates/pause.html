@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Emotion Detection</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'top.css')}}">
+</head>
+
+<body>
+    <nav>
+        <div class="head">
+            Emotion Detection
+        </div>
+        <ul>
+            <li><a href="about:blank" onclick="kill()"> Quit </a></li>
+            <li onclick="home()"><a> Home </a></li>
+        </ul>
+    </nav>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <h1>Emotion: {{ top_emotion }}</h1>
+    <div class="image_container">
+        <div id="urimg">
+            <img id="captured_img" src="{{ url_for('static', filename='captured_image.jpg')}}" alt="Your image">
+        </div>
+        <div id="emoimg">
+            {% if condition == 1 %}
+            <img id="emotion-image" src="{{ url_for('static', filename='angry.JPG') }}" alt="Angry">
+            {% elif condition == 2 %}
+            <img id="emotion-image" src="{{ url_for('static', filename='disgust.JPG') }}" alt="Disgust">
+            {% elif condition == 3 %}
+            <img id="emotion-image" src="{{ url_for('static', filename='fear.JPG') }}" alt="Fear">
+            {% elif condition == 4 %}
+            <img id="emotion-image" src="{{ url_for('static', filename='happy.JPG') }}" alt="Happy">
+            {% elif condition == 5 %}
+            <img id="emotion-image" src="{{ url_for('static', filename='neutral.JPG') }}" alt="Neutral">
+            {% elif condition == 6 %}
+            <img id="emotion-image" src="{{ url_for('static', filename='sad.JPG') }}" alt="Sad">
+            {% elif condition == 7 %}
+            <img id="emotion-image" src="{{ url_for('static', filename='surprise.JPG') }}" alt="Surprise">
+            {% else %}
+            <img id="emotion-image" src="{{ url_for('static', filename='no_emotion.JPG')}}"
+                alt="No Face / Emotion Detected">
+            {% endif %}
+        </div>
+    </div>
+    <br><br>
+    <div class="button-container">
+        <img src="{{ url_for('static', filename='start.PNG')}}" class="image-size" onclick="play()">
+
+    </div>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+
+</html>

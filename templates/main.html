@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Emotion Detection</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'top.css')}}">
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="head">
+            Emotion Detection
+        </div>
+        <ul>
+            <li><a href="about:blank" onclick="kill()"> Quit </a></li>
+            <li onclick="home()"><a> Home </a></li>
+        </ul>
+    </nav>
+    <script src="{{ url_for('static', filename='content_update.js') }}"></script>
+    <div id="emotion">
+        <h1>Emotion: <span id="top-emotion">{{ top_emotion }}</span></h1>
+    </div>
+    <div class="image_container">
+        <div id="urimg">
+            <img id="captured-img" src="{{ url_for('static', filename='loading.gif')}}" alt="Your image">
+        </div>
+        <div id="emoimg">
+            <img id="emotion-image" src="{{ url_for('static', filename='emo_load.gif')}}"
+                alt="No Face / Emotion Detected">
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="button-container">
+        <img src="{{ url_for('static', filename='Pause.PNG')}}" class="image-size" onclick="pause()">
+
+    </div>
+    <script src="{{ url_for('static', filename='content_update.js') }}"></script>
+
+</body>
+
+</html>
